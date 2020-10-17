@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_marginBottom="50dp"
+tools:context=".ui.clientes.NovoRegisto">
+
+
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+        <ImageButton
+            android:id="@+id/icn_clientes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            android:src="@drawable/i_clientes_"
+            android:maxHeight="100dp"
+            android:contentDescription="@string/clientes" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Registo de novo cliente"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorAccent" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <WebView
+            android:id="@+id/webview_nr"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorAccent" >
+
+
+        </WebView>
+
+
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/form_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Os campos assinalados com um * são obrigatórios"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/f_nome"
+                android:layout_height="wrap_content"
+                android:hint="* Nome"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/f_sobrenome"
+                android:layout_height="wrap_content"
+                android:hint="* Sobrenome"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/f_Email"
+                android:layout_height="wrap_content"
+                android:hint="* email"
+                android:inputType="textEmailAddress"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+        </EditText>
+
+            <EditText
+                android:id="@+id/f_telemovel"
+                android:layout_height="wrap_content"
+                android:hint="* Telemóvel (usado para confirmar conta)"
+                android:inputType="phone"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/f_nomeutilizador"
+                android:layout_height="wrap_content"
+                android:hint="* Nome de utilizador"
+                android:inputType="text"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/nif"
+                android:layout_height="wrap_content"
+                android:hint="* NIF"
+                android:inputType="phone"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_height="wrap_content"
+                android:hint="* Password"
+                android:inputType="text"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Só fazemos entregas dentro da vila de Nisa"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/colorAccent" />
+            <EditText
+                android:id="@+id/f_morada"
+                android:layout_height="wrap_content"
+                android:hint="* Rua"
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+            <EditText
+                android:id="@+id/f_numero"
+                android:layout_height="wrap_content"
+                android:hint="* Número e andar"
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/f_codpostal"
+                android:layout_height="wrap_content"
+                android:hint="* Código postal (####-###)"
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_text_white"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/f_localidade"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_x="-9dp"
+                android:layout_y="-8dp"
+                android:background="@drawable/rounded_text_white"
+                android:hint="* Localidade"
+                android:inputType="textPostalAddress"
+                android:padding="10dp"></EditText>
+
+            <CheckBox
+                android:id="@+id/f_whatsapp"
+                android:layout_height="wrap_content"
+                android:text="Usar Whatsapp?"
+                android:layout_width="fill_parent"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+            </CheckBox>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Avatar"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <RadioGroup
+                android:id="@+id/f_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <RadioButton
+
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_hamburguer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:tooltipText="1"
+                    android:drawableRight="@drawable/ri_hamburguer_"
+                   />
+
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="2"
+                    android:drawableRight="@drawable/ri_bar_"
+                 />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_bilhar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="3"
+                    android:drawableRight="@drawable/ri_bilhar_"
+                  />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_dardos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="4"
+                    android:drawableRight="@drawable/ri_dardos_"
+                 />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_lounga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="5"
+                    android:drawableRight="@drawable/ri_lounge_"
+           />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_massa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="6"
+                    android:drawableRight="@drawable/ri_massa_"
+                />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_matraquilhos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="7"
+                    android:drawableRight="@drawable/ri_matraquilhos_"
+           />
+                <RadioButton
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/av_pingpong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:tooltipText="8"
+
+
+                    android:drawableRight="@drawable/ri_pingpong_"
+                  />
+
+            </RadioGroup>
+
+
+
+            <Button
+                android:id="@+id/b_submeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_b_dgrey"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="submeter registo"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </TableRow>
+</TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
