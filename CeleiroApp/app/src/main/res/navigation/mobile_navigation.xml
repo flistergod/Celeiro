@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.celeiro.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_menu"
+            app:destination="@id/nav_menu" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_clientes"
+            app:destination="@id/nav_clientes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_servicos"
+            app:destination="@id/nav_servicos" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_contactos"
+            app:destination="@id/nav_contactos" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_galeria"
+            app:destination="@id/nav_galeria_pratos" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_menudia"
+            app:destination="@id/nav_menudia" />
+    </fragment>
+-->
+    <fragment
+        android:id="@+id/nav_menudia"
+        android:name="com.example.celeiro.ui.menudodia.MenudodiaFragment"
+        android:label="@string/menu_menudodia"
+        tools:layout="@layout/fragment_menudodia" />
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.celeiro.ui.menu.MenuFragment"
+        android:label="@string/menu_menu"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/nav_clientes"
+        android:name="com.example.celeiro.ui.clientes.ClientesFragment"
+        android:label="@string/menu_clientes"
+        tools:layout="@layout/fragment_clientes" >
+        <action
+            android:id="@+id/action_nav_clientes_to_programaPontos"
+            app:destination="@id/nav_programaPontos" />
+        <action
+            android:id="@+id/action_nav_clientes_to_novoRegisto"
+            app:destination="@id/nav_novoRegisto" />
+        <action
+            android:id="@+id/action_nav_clientes_to_nav_menuClientesBase"
+            app:destination="@id/nav_menuClientesBase" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_servicos"
+        android:name="com.example.celeiro.ui.servicos.ServicosFragment"
+        android:label="@string/menu_servicos"
+        tools:layout="@layout/fragment_servicos" >
+        <action
+            android:id="@+id/action_nav_servicos_to_nav_clientes"
+            app:destination="@id/nav_clientes" />
+        <action
+            android:id="@+id/action_nav_servicos_to_nav_clientes2"
+            app:destination="@id/nav_clientes" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_galeria_pratos"
+        android:name="com.example.celeiro.ui.galeria.GaleriaFragmentPratos"
+        android:label="@string/menu_galeria_pratos"
+        tools:layout="@layout/fragment_galeria_pratos" >
+        <action
+            android:id="@+id/action_nav_galeria_to_nav_galeria_saladas"
+            app:destination="@id/nav_galeria_saladas" />
+        <action
+            android:id="@+id/action_nav_galeria_to_nav_galeria_snacks"
+            app:destination="@id/nav_galeria_snacks" />
+        <action
+            android:id="@+id/action_nav_galeria_to_nav_galeria_casa"
+            app:destination="@id/nav_galeria_casa" />
+        <action
+            android:id="@+id/action_nav_galeria_to_nav_galeria_festas"
+            app:destination="@id/nav_galeria_festas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contactos"
+        android:name="com.example.celeiro.ui.contactos.ContactosFragment"
+        android:label="@string/menu_contactos"
+        tools:layout="@layout/fragment_contactos" />
+
+    <fragment
+        android:id="@+id/nav_galeria_casa"
+        android:name="com.example.celeiro.ui.galeria.GaleriaFragmentCasa"
+        android:label="@string/menu_galeria_casa"
+        tools:layout="@layout/fragment_galeria_casa">
+        <action
+            android:id="@+id/action_nav_galeria_casa_to_nav_galeria_snacks"
+            app:destination="@id/nav_galeria_snacks" />
+        <action
+            android:id="@+id/action_nav_galeria_casa_to_nav_galeria_saladas"
+            app:destination="@id/nav_galeria_saladas" />
+        <action
+            android:id="@+id/action_nav_galeria_casa_to_nav_galeria"
+            app:destination="@id/nav_galeria_pratos" />
+        <action
+            android:id="@+id/action_nav_galeria_casa_to_nav_galeria_festas"
+            app:destination="@id/nav_galeria_festas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_galeria_festas"
+        android:name="com.example.celeiro.ui.galeria.GaleriaFragmentFestas"
+        android:label="@string/menu_galeria_festas"
+        tools:layout="@layout/fragment_galeria_festas">
+        <action
+            android:id="@+id/action_nav_galeria_festas_to_nav_galeria_casa"
+            app:destination="@id/nav_galeria_casa" />
+        <action
+            android:id="@+id/action_nav_galeria_festas_to_nav_galeria_snacks"
+            app:destination="@id/nav_galeria_snacks" />
+        <action
+            android:id="@+id/action_nav_galeria_festas_to_nav_galeria_saladas"
+            app:destination="@id/nav_galeria_saladas" />
+        <action
+            android:id="@+id/action_nav_galeria_festas_to_nav_galeria"
+            app:destination="@id/nav_galeria_pratos" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_galeria_snacks"
+        android:name="com.example.celeiro.ui.galeria.GaleriaFragmentSnack"
+        android:label="@string/menu_galeria_snacks"
+        tools:layout="@layout/fragment_galeria_snack">
+        <action
+            android:id="@+id/action_nav_galeria_snacks_to_nav_galeria_saladas"
+            app:destination="@id/nav_galeria_saladas" />
+        <action
+            android:id="@+id/action_nav_galeria_snacks_to_nav_galeria"
+            app:destination="@id/nav_galeria_pratos" />
+        <action
+            android:id="@+id/action_nav_galeria_snacks_to_nav_galeria_casa"
+            app:destination="@id/nav_galeria_casa" />
+        <action
+            android:id="@+id/action_nav_galeria_snacks_to_nav_galeria_festas"
+            app:destination="@id/nav_galeria_festas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_galeria_saladas"
+        android:name="com.example.celeiro.ui.galeria.GaleriaFragmentSaladas"
+        android:label="@string/menu_galeria_saladas"
+        tools:layout="@layout/fragment_galeria_saladas">
+        <action
+            android:id="@+id/action_nav_galeria_saladas_to_nav_galeria"
+            app:destination="@id/nav_galeria_pratos" />
+        <action
+            android:id="@+id/action_nav_galeria_saladas_to_nav_galeria_snacks"
+            app:destination="@id/nav_galeria_snacks" />
+        <action
+            android:id="@+id/action_nav_galeria_saladas_to_nav_galeria_casa"
+            app:destination="@id/nav_galeria_casa" />
+        <action
+            android:id="@+id/action_nav_galeria_saladas_to_nav_galeria_festas"
+            app:destination="@id/nav_galeria_festas" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_programaPontos"
+        android:name="com.example.celeiro.ui.clientes.ProgramaPontos"
+        android:label="Programa de Pontos"
+        tools:layout="@layout/fragment_programa_pontos" />
+    <fragment
+        android:id="@+id/nav_novoRegisto"
+        android:name="com.example.celeiro.ui.clientes.NovoRegisto"
+        android:label="Novo Registo"
+        tools:layout="@layout/fragment_novo_registo" >
+        <action
+            android:id="@+id/action_nav_novoRegisto_to_nav_confirmarRegisto"
+            app:destination="@id/nav_confirmarRegisto" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_confirmarRegisto"
+        android:name="com.example.celeiro.ui.clientes.confirmarRegisto"
+        android:label="Confirmar Registo"
+        tools:layout="@layout/fragment_confirmar_registo" >
+        <action
+            android:id="@+id/action_nav_confirmarRegisto_to_nav_novoRegisto"
+            app:destination="@id/nav_novoRegisto" />
+        <action
+            android:id="@+id/action_nav_confirmarRegisto_to_nav_menuClientesBase"
+            app:destination="@id/nav_menuClientesBase" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_menuClientesBase"
+        android:name="com.example.celeiro.ui.clientes.menuClientesBase"
+        android:label="Área de cliente"
+        tools:layout="@layout/fragment_menu_clientes_base" >
+        <action
+            android:id="@+id/action_nav_menuClientesBase_to_nav_programaPontos"
+            app:destination="@id/nav_programaPontos" />
+        <action
+            android:id="@+id/action_nav_menuClientesBase_to_menuClientesDados"
+            app:destination="@id/menuClientesDados" />
+        <action
+            android:id="@+id/action_nav_menuClientesBase_to_menuClientePromo"
+            app:destination="@id/menuClientesPromo" />
+        <action
+            android:id="@+id/action_nav_menuClientesBase_to_menuClientsEncomenda"
+            app:destination="@id/menuClientesEncomenda" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuClientesDados"
+        android:name="com.example.celeiro.ui.clientes.menuClientesDados"
+        android:label="Área de cliente - Dados de conta"
+        tools:layout="@layout/nav_menu_clientes_dados" >
+        <action
+            android:id="@+id/action_menuClientesDados_to_menuClientesPromo"
+            app:destination="@id/menuClientesPromo" />
+        <action
+            android:id="@+id/action_menuClientesDados_to_menuClientesEncomenda"
+            app:destination="@id/menuClientesEncomenda" />
+        <action
+            android:id="@+id/action_menuClientesDados_to_nav_clientesConfirmarDados"
+            app:destination="@id/nav_clientesConfirmarDados" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuClientesPromo"
+        android:name="com.example.celeiro.ui.clientes.menuClientesPromo"
+        android:label="Área de cliente - Vales"
+        tools:layout="@layout/nav_menu_clientes_promo" >
+        <action
+            android:id="@+id/action_menuClientesPromo_to_menuClientesEncomenda"
+            app:destination="@id/menuClientesEncomenda" />
+        <action
+            android:id="@+id/action_menuClientesPromo_to_menuClientesDados"
+            app:destination="@id/menuClientesDados" />
+        <action
+            android:id="@+id/action_menuClientesPromo_to_nav_clientesVale"
+            app:destination="@id/nav_clientesVale" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuClientesEncomenda"
+        android:name="com.example.celeiro.ui.clientes.menuClientesEncomenda"
+        android:label="Área de cliente - Encomenda"
+        tools:layout="@layout/nav_menu_clientes_encomenda" >
+        <action
+            android:id="@+id/action_menuClientesEncomenda_to_menuClientesPromo"
+            app:destination="@id/menuClientesPromo" />
+        <action
+            android:id="@+id/action_menuClientesEncomenda_to_menuClientesDados"
+            app:destination="@id/menuClientesDados" />
+        <action
+            android:id="@+id/action_menuClientesEncomenda_to_nav_clientesHistorico"
+            app:destination="@id/nav_clientesHistorico" />
+        <action
+            android:id="@+id/action_menuClientesEncomenda_to_nav_clientesEncomenda"
+            app:destination="@id/nav_clientesEncomenda" />
+        <action
+            android:id="@+id/action_menuClientesEncomenda_to_nav_clientesEncomendar"
+            app:destination="@id/nav_clientesEncomendar" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesVale"
+        android:name="com.example.celeiro.ui.clientes.clientesVale"
+        android:label="Área de cliente - Vale"
+        tools:layout="@layout/fragment_clientes_vale" >
+        <action
+            android:id="@+id/action_nav_clientesVale_to_nav_clientesConfirmar"
+            app:destination="@id/nav_clientesConfirmar" />
+        <action
+            android:id="@+id/action_nav_clientesVale_to_nav_clientesEncomendar"
+            app:destination="@id/nav_clientesEncomendar" />
+        <action
+            android:id="@+id/action_nav_clientesVale_to_menuClientesPromo"
+            app:destination="@id/menuClientesPromo" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesHistorico"
+        android:name="com.example.celeiro.ui.clientes.clientesHistorico"
+        android:label="Área de cliente - Historico"
+        tools:layout="@layout/fragment_clientes_historico" >
+        <action
+            android:id="@+id/action_nav_clientesHistorico_to_nav_clientesEncomenda"
+            app:destination="@id/nav_clientesEncomenda" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesEncomenda"
+        android:name="com.example.celeiro.ui.clientes.clientesEncomenda"
+        android:label="Área de cliente - Confirmar Encomenda"
+        tools:layout="@layout/fragment_clientes_encomenda" >
+        <action
+            android:id="@+id/action_nav_clientesEncomenda_to_nav_clientesEncomendar"
+            app:destination="@id/nav_clientesEncomendar" />
+        <action
+            android:id="@+id/action_nav_clientesEncomenda_to_nav_clientesConfirmar"
+            app:destination="@id/nav_clientesConfirmar" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesEncomendar"
+        android:name="com.example.celeiro.ui.clientes.clientesEncomendar"
+        android:label="Área de cliente - Encomendar"
+        tools:layout="@layout/fragment_clientes_encomendar" >
+        <action
+            android:id="@+id/action_nav_clientesEncomendar_to_nav_clientesEncomenda"
+            app:destination="@id/nav_clientesEncomenda" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesConfirmar"
+        android:name="com.example.celeiro.ui.clientes.clientesConfirmar"
+        android:label="Área de cliente - Confirmar Encomenda"
+        tools:layout="@layout/fragment_clientes_confirmar" >
+        <action
+            android:id="@+id/action_nav_clientesConfirmar_to_nav_menuClientesBase"
+            app:destination="@id/nav_menuClientesBase" />
+        <action
+            android:id="@+id/action_nav_clientesConfirmar_to_nav_clientesVale"
+            app:destination="@id/nav_clientesVale" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clientesConfirmarDados"
+        android:name="com.example.celeiro.ui.clientes.clientesConfirmarDados"
+        android:label="Área de cliente - Confirmar_dados"
+        tools:layout="@layout/fragment_clientes_confirmar_dados" >
+        <action
+            android:id="@+id/action_nav_clientesConfirmarDados_to_menuClientesDados"
+            app:destination="@id/menuClientesDados" />
+    </fragment>
+</navigation>
